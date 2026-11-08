@@ -1,0 +1,25 @@
+{
+  "name": "meurei-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@capacitor/android": "^7.6.10",
+    "@capacitor/app": "^7.1.2",
+    "@capacitor/cli": "^7.6.10",
+    "@capacitor/core": "^7.6.10",
+    "@capacitor/share": "^7.0.4",
+    "@capgo/capacitor-updater": "^7.53.0",
+    "firebase": "^11.10.0"
+  },
+  "devDependencies": {
+    "adm-zip": "^0.5.16"
+  }
+}

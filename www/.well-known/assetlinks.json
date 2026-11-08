@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "br.app.meurei",
+    "sha256_cert_fingerprints": ["7F:97:A1:4A:1A:69:B3:89:F4:E9:B3:AF:10:C3:73:FE:55:A5:B6:71:08:18:91:8C:93:4A:3C:31:48:F4:0A:AC"]
+  }
+}]

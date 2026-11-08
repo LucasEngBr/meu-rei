@@ -1,0 +1,29 @@
+# dependências
+node_modules/
+
+# gerados pelo publicar.js / preparar.js (a fonte é www/peao.html)
+www/index.html
+www/fonts/
+www/atualizacao/
+
+# APKs e build do Android
+*.apk
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/capacitor-cordova-android-plugins/build/
+# cópias que o "npx cap sync" faz do www para dentro do Android
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+
+# Firebase CLI
+.firebase/
+
+# backups locais
+index.anterior.html
+
+# sistema
+.DS_Store
+Thumbs.db

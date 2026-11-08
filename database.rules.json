@@ -1,0 +1,33 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "games": {
+      "$id": {
+        ".read": true,
+        ".write": true,
+        ".validate": "$id.matches(/^[a-z0-9]{10}$/)",
+        "host": { ".validate": "newData.isString() && newData.val().length <= 20 && (!data.exists() || data.val() == newData.val())" },
+        "hostColor": { ".validate": "newData.val() == 'w' || newData.val() == 'b'" },
+        "hostName": { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 20 && (!data.exists() || data.val() == newData.val())" },
+        "hostAv": { ".validate": "newData.isString() && newData.val().matches(/^[kqrbnp]$/)" },
+        "guestName": { ".validate": "newData.isString() && newData.val().length >= 1 && newData.val().length <= 20 && !data.exists()" },
+        "guestAv": { ".validate": "newData.isString() && newData.val().matches(/^[kqrbnp]$/) && !data.exists()" },
+        "guest": { ".validate": "newData.isString() && newData.val().length <= 20 && !data.exists()" },
+        "tc": { ".validate": "newData.isString() && newData.val().length <= 8" },
+        "status": { ".validate": "newData.val() == 'waiting' || newData.val() == 'playing' || newData.val() == 'over'" },
+        "created": { ".validate": "newData.isNumber()" },
+        "lastTs": { ".validate": "newData.isNumber()" },
+        "moves": {
+          "$n": { ".validate": "!data.exists() && newData.isString() && newData.val().matches(/^[a-h][1-8][a-h][1-8][qrbn]?$/)" }
+        },
+        "clock": { "$c": { ".validate": "($c == 'w' || $c == 'b') && newData.isNumber()" } },
+        "result": { ".validate": "newData.val() == '1-0' || newData.val() == '0-1' || newData.val() == '½-½'" },
+        "reason": { ".validate": "newData.isString() && newData.val().length <= 60" },
+        "rematch": { ".validate": "newData.isString() && newData.val().matches(/^[a-z0-9]{10}$/)" },
+        "presence": { "$c": { ".validate": "newData.isBoolean()" } },
+        "$outro": { ".validate": false }
+      }
+    }
+  }
+}

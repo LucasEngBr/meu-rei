@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Cor atrás da barra de status e da barra de navegação (o app não desenha por baixo delas) -->
+<resources>
+    <color name="meurei_fundo">#F6F1E8</color>
+    <bool name="meurei_barras_claras">true</bool>
+</resources>
